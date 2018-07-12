@@ -1,15 +1,12 @@
 import fcsv
 
 
-data = [{'paula': 'aaa1', 'b': 'bbbb'}, {'a2': 'aaa2'}, {'a': 'aaa3'}]
+big_field = 'z' * 200000
 
-# def create(data):  # lista de dicionarios
-#     header = data[0].keys()
-#     values = [row.values() for row in data]
+data = [
+    {'a': 'aaa1', 'b': 'bbbb'},
+    {'a': 'aaa2', 'b': 'yyyewr'},
+    {'a': 'aaa3', 'b': big_field},
+]
 
-#     return header, values
-
-# header, values = create(data)
-# fcsv.create(header, values)
-
-fcsv.create(data)
+print(fcsv.create(data))
